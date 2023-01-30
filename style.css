@@ -7,14 +7,13 @@
     /* outline: 1px solid red; */
 }
 :root {
-    --primary: #fcaf70;
-    --secondary: #a06a24;
+    --primary: #ffa76c;
 }
 button {
     cursor: pointer;
 }
 body {
-    background-color: #fff9f4;
+    background-color: #ffffff;
 }
 
 .top {
@@ -41,8 +40,13 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
+@media screen and (max-width: 450px) {
+    h1 {
+        flex-direction: column;
+    }
+}
+
 h1 img {
     width: 60px;
     margin: 0 20px;
@@ -57,13 +61,14 @@ form {
     padding: 5px;
     border: 2px solid var(--primary);
     border-radius: 25px;
-    margin: auto 5%;
+    
     max-width: 600px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 form input {
     border: none;
     background: none;
@@ -205,7 +210,7 @@ ul li button:hover {
 }
 
 ::-webkit-scrollbar-track {
-    margin: 20px;
+    margin: 50px 0;
     border-radius: 10px;
 }
 
@@ -214,27 +219,14 @@ ul li button:hover {
     border-radius: 20px;
 }
 
-.getMoreInfo1, .getMoreInfo2 {
-    position: fixed;
-    opacity: 0;
-    z-index: -10;
-    top: 10;
-    left: 10;
-    right: 10;
-    bottom: 10;
-    border-radius: 25px;
-
-    max-width: 800px;
-    width: 100%;
-    background: var(--secondary);
+a {
+    text-decoration: none;
     color: #fff;
-}
 
-.getMoreInfo1.active, .getMoreInfo2.active {
-    opacity: 1;
-    z-index: 10;
 }
-
+a:hover {
+    color: var(--primary);
+}
 
 footer {
     display: flex;
